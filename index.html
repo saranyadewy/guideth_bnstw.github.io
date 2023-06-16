@@ -184,7 +184,7 @@
                 var d_list_dun = new Date("July 21, 1983 01:15:00");
                 var minutes_list_dun = d_list_dun.getMinutes();
                 var minutes_list_dun_md5 = md5(minutes_list_dun);
-                $.get('https://raw.githubusercontent.com/saranyadewy/bnstw_thailand/main/data/list_dun.json?v='+ minutes_list_dun_md5, function (data, status) {
+                $.get(`${domain}data/list_dun.json?v=`+ minutes_list_dun_md5, function (data, status) {
                     const md5nf = md5(nf);
 
                     if (data["0"][md5nf] != undefined) {
@@ -264,7 +264,7 @@
                     case "sb23s6_1":
                     case "sb23s6_6":
                     case "sp23s6":
-                        $.get("/" + p.toLowerCase() + ".html?key" + makecss(), function (data, status) {
+                        $.get(`${domain}${p.toLowerCase()}.html?key=${makecss()}`, function (data, status) {
                             $(".addcontent").append(data);
                             $(".ripbnsth_").hide();
                             $(".path-thai_").hide();
