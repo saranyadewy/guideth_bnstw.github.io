@@ -1,0 +1,1 @@
+const domain = "https://saranyadewy.github.io/guideth_bnstw.github.io/";
