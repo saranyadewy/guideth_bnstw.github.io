@@ -1,0 +1,47 @@
+<link href='https://fonts.googleapis.com/css?family=Itim' rel='stylesheet'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<link rel="stylesheet"
+  href="https://mdbcdn.b-cdn.net/wp-content/themes/mdbootstrap4/docs-app/css/compiled-4.20.0.min.css">
+<style>
+  .start-container {
+    margin: auto;
+    width: 50%;
+    border: 3px solid rgb(61, 223, 55);
+    padding: 10px;
+    text-align: center;
+    top: 75%;
+  }
+
+  body {
+    background-image: url(https://i.imgur.com/GGRukyz.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    font-family: 'Itim';
+    font-size: 22px;
+  }
+
+  a:link {
+    color: blue;
+  }
+
+  a:visited {
+    color: blue;
+  }
+
+  a:hover {
+    color: blue;
+  }
+
+  a:active {
+    color: blue;
+  }
+</style>
+<div class="card start-container">
+  <div class="card-body">
+    <h1>I3lack I3unny</h1>
+    <h5>Coming Soon!</h5>
+    <h5>Discord : ღ♫Diwツ♫ღ#7290</h5>
+    <h5>Community BNS : <a href="https://discord.gg/AndAW9dzrj">https://discord.gg/AndAW9dzrj</a></h5>
+  </div>
+</div>

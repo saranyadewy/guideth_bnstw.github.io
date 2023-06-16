@@ -1,0 +1,126 @@
+<div class="card-body">
+    <h3 id="datetime">
+        <img src="/loading.gif" alt="" width="100rem">
+    </h3>
+    <script>
+        $(function () {
+            $("#tabs").tabs();
+        });
+
+        function daily_time(){
+            const d = new Date();
+            document.getElementById("datetime").innerHTML = d;
+            setTimeout(() => {
+                daily_time();
+            }, 500);
+        }
+
+        setTimeout(() => {
+            const today = getDayName(new Date(get_date_()));
+            const tomorrow = getDayName(new Date(get_date__(get_date_())));
+            $("#today").html(`วันนี้ (${today})`);
+            $("#tomorrow").html(`พรุ่งนี้ (${tomorrow})`);
+            daily_time();
+            getdailyquest()
+        }, 1000);
+        function getdailyquest() {
+            var today = getDayName(new Date(get_date_()));
+            var tomorrow = getDayName(new Date(get_date__(get_date_())));
+            today = today.toLowerCase();
+            tomorrow = tomorrow.toLowerCase();
+            $.getJSON('/data/daily_list.json?key=' + makecss(), function (data) {
+                for (let i = 0; i < 50; i++) {
+                    if (data["0"]["daily_quest"][today][i] == undefined) {
+                        break;
+                    } else {
+                        $(".add-content-level-1").append(obj_daily(
+                            data["0"]["daily_list"][data["0"]["daily_quest"][today][i]]["name"],
+                            data["0"]["daily_list"][data["0"]["daily_quest"][today][i]]["img"],
+                            data["0"]["daily_list"][data["0"]["daily_quest"][today][i]]["location"],
+                            data["0"]["daily_quest"][today][i]
+                        ));
+                        $(".add-content-level-2").append(obj_daily(
+                            data["0"]["daily_list"][data["0"]["daily_quest"][tomorrow][i]]["name"],
+                            data["0"]["daily_list"][data["0"]["daily_quest"][tomorrow][i]]["img"],
+                            data["0"]["daily_list"][data["0"]["daily_quest"][tomorrow][i]]["location"],
+                            data["0"]["daily_quest"][tomorrow][i]
+                        ));
+                        if (i <= 10) {
+                            $(".add-content-level-3").append(obj_daily(
+                                data["0"]["daily_list"][data["0"]["weekly_quest"][i]]["name"],
+                                data["0"]["daily_list"][data["0"]["weekly_quest"][i]]["img"],
+                                data["0"]["daily_list"][data["0"]["weekly_quest"][i]]["location"],
+                                data["0"]["weekly_quest"][i]
+                            ));
+                        }
+                    }
+                }
+            });
+        }
+        function obj_daily(n, i, l, id) {
+            const cssid = makecss();
+            n = n.replaceAll("เควส :", `<img width='32px' style='pointer-events: none;' draggable='false' src='/img/Q00001.png'>`);
+            l = l.replaceAll("[icon:warp]", `<img width='32px' style='pointer-events: none;' draggable='false' src='/img/Q00007.png'>`);
+            l = l.replaceAll("[icon:dungeons]", `<img width='32px' style='pointer-events: none;' draggable='false' src='/img/Q00006.png'>`);
+            $("#headercss").append(`.${cssid} {background-image: url("https://i.imgur.com/${i}.png");}`);
+            const obj = `
+            <tr>
+                <td>
+                    <div class="d-flex justify-content-between">
+                        <div>
+                            ${n}
+                            <h5>สถานที่ทำเควส : ${l}</h5>
+                            <h6 style="color: #cbc8c8;">id tag : ${id}</h6>
+                        </div>
+                        <div class="even-image- ${cssid}"">
+                            <img class="image-m-full even-image" style="width: 200px;" src="https://i.imgur.com/U96AcCC.png" draggable="false">
+                        </div>
+                    </div>
+                </td>
+            </tr>`;
+            return obj;
+
+        }
+    </script>
+    <div id="tabs" class="prevent-select">
+        <ul>
+            <li><a href="#tabs-1" id="today">วันนี้</a></li>
+            <li><a href="#tabs-2" id="tomorrow">พรุ่งนี้</a></li>
+            <li><a href="#tabs-3">รายสัปดาห์</a></li>
+        </ul>
+        <div id="tabs-1">
+            <table class="table table-hover">
+                <thead style="font-size: 22px;">
+                    <tr>
+                        <th scope="col" style="text-align: center;">ภารกิจ</th>
+                    </tr>
+                </thead>
+                <tbody class="add-content-level-1" style="font-size: 17px;">
+
+                </tbody>
+            </table>
+        </div>
+        <div id="tabs-2">
+            <table class="table table-hover">
+                <thead style="font-size: 22px;">
+                    <tr>
+                        <th scope="col" style="text-align: center;">ภารกิจ</th>
+                    </tr>
+                </thead>
+                <tbody class="add-content-level-2" style="font-size: 17px;">
+                </tbody>
+            </table>
+        </div>
+        <div id="tabs-3">
+            <table class="table table-hover">
+                <thead style="font-size: 22px;">
+                    <tr>
+                        <th scope="col" style="text-align: center;">ภารกิจ</th>
+                    </tr>
+                </thead>
+                <tbody class="add-content-level-3" style="font-size: 17px;">
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

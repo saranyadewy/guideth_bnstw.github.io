@@ -1,0 +1,151 @@
+<div class="card-body">
+    <h3 class="soul-title">
+        <img src="/loading.gif" alt="" width="100rem">
+    </h3>
+    <script id="get_soul_event_tag">
+        function get_sb_23s6_1(n, c) {
+            $.get('/data/soul_boost_23S6_6.json?' + makecss(), function (data, status) {
+                $(`.${c}`).html("");
+                for (let i = 0; i < 999; i++) {
+                    const cssid = makecss();
+                    const tdtw = makecss();
+                    const tdth_text = makecss();
+                    const tdth_img = makecss();
+                    if (data["0"]["boost"][n][i] == undefined) {
+                        break;
+                    } else {
+                        //console.log(data["0"]["boost"][n][i]);
+                        $(`.${c}`).append(`
+                            <tr>
+                                <td class="${tdtw}">
+                                    <img src="/img/fbloader.gif" alt="">
+                                </td>
+                                <td style="font-size: 20px;">
+                                    <div class="d-flex justify-content-between">
+                                        <div class="${tdth_text}"><img src="/img/fbloader.gif" alt=""></div>
+                                        <div class="${tdth_img} ${cssid} even-image-"><img src="/img/fbloader.gif" alt=""></div>
+                                    </div>
+                                </td>
+                            </tr>
+                        `);
+                        setTimeout(() => {
+                            $(`.${tdtw}`).html(""); 
+                            for (let l = 0; l < 999; l++) {
+                                if (data["0"]["boost"][n][i]["tw"][l] == undefined) {
+                                    break;
+                                } else {
+                                    $(`.${tdtw}`).append(`${data["0"]["boost"][n][i]["tw"][l]}<br>`);
+                                }
+                            }
+                            $(`.${tdth_text}`).html("");
+                            for (let l = 0; l < 999; l++) {
+                                if (data["0"]["boost"][n][i]["th"][l] == undefined) {
+                                    break;
+                                } else {
+                                    var text_th_ = data["0"]["boost"][n][i]["th"][l];
+                                    text_th_ = transfer_icon(text_th_,data["0"]["boost"][n][i]["th"]["name"],data["0"]["boost"][n][i]["img"]);
+
+
+                                    $(`.${tdth_text}`).append(`${text_th_}<br>`);
+                                }
+                            }
+                            $(`.${tdth_img}`).html(`<img class="image-m-full even-image" style="width: 200px;" src="https://i.imgur.com/U96AcCC.png" draggable="false">`);
+                            setTimeout(() => {
+                                $("#headercss").append(`.${cssid} {background-image: url("https://i.imgur.com/${data["0"]["boost"][n][i]["img"]}.png");}`);
+                            }, 800);
+                            $(`.${tdth_text}`).append(`คะแนนรวม : ${data["0"]["boost"][n][i]["score"]}<br>`);
+                        }, 800);
+                    }
+                }
+                $(`.${c}`).append(`<tr><td>I3lackI3unny</td><td><a href="i3lacki3unny.web.app">i3lacki3unny.web.app</a></td></tr>`);
+            });
+        }
+        window.history.pushState("object or string", "Title", "/share/sb23s6_6.html?v=" + makecss());
+        setTimeout(() => { 
+            get_sb_23s6_1("0", "add-content-level-1");
+            get_sb_23s6_1("1", "add-content-level-2");
+            get_sb_23s6_1("2", "add-content-level-3");
+            get_sb_23s6_1("3", "add-content-level-4");
+            $(".soul-title").html("โซบูส เริ่ม 14/06/2023 ถึง 19/07/2023 ก่อนปิดปรับปรุงเซิฟเวอร์");
+            window.history.pushState("object or string", "Title", "/share/sb23s6_6.html?v=" + makecss());
+            $("#get_soul_event_tag").remove();
+        }, 1000);
+    </script>
+    <script>
+        $(function () {
+            $("#tabs").tabs();
+        });
+    </script>
+    <div id="tabs" class="prevent-select">
+        <ul>
+            <li><a href="#tabs-1">ขั้น 1</a></li>
+            <li><a href="#tabs-2">ขั้น 2</a></li>
+            <li><a href="#tabs-3">ขั้น 3</a></li>
+            <li><a href="#tabs-4">ขั้น 4</a></li>
+        </ul>
+        <div id="tabs-1">
+            <table class="table table-hover">
+                <thead style="font-size: 22px;">
+                    <tr>
+                        <th scope="col">ภารกิจ</th>
+                        <th scope="col">คำแปล</th>
+                    </tr>
+                </thead>
+                <tbody class="add-content-level-1" style="font-size: 17px;">
+                    <tr>
+                        <td>Coming Soon!</td>
+                        <td>Coming Soon!</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="tabs-2">
+            <table class="table table-hover">
+                <thead style="font-size: 22px;">
+                    <tr>
+                        <th scope="col">ภารกิจ</th>
+                        <th scope="col">คำแปล</th>
+                    </tr>
+                </thead>
+                <tbody class="add-content-level-2" style="font-size: 17px;">
+                    <tr>
+                        <td>Coming Soon!</td>
+                        <td>Coming Soon!</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="tabs-3">
+            <table class="table table-hover">
+                <thead style="font-size: 22px;">
+                    <tr>
+                        <th scope="col">ภารกิจ</th>
+                        <th scope="col">คำแปล</th>
+                    </tr>
+                </thead>
+                <tbody class="add-content-level-3" style="font-size: 17px;">
+                    <tr>
+                        <td>Coming Soon!</td>
+                        <td>Coming Soon!</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="tabs-4">
+            <table class="table table-hover">
+                <thead style="font-size: 22px;">
+                    <tr>
+                        <th scope="col">ภารกิจ</th>
+                        <th scope="col">คำแปล</th>
+                    </tr>
+                </thead>
+                <tbody class="add-content-level-4" style="font-size: 17px;">
+                    <tr>
+                        <td>Coming Soon!</td>
+                        <td>Coming Soon!</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

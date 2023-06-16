@@ -1,0 +1,74 @@
+<style>
+    .dungeons-card-margin{
+        margin: 15px;
+        width: 18rem;
+        background-color: #ffffff;
+    }
+    .dungeons-card-margin:hover{
+        background-color: #e0e0e0;
+    }
+</style>
+<script>
+    var url_string = window.location.href;
+    var url = new URL(url_string);
+    var t = url.searchParams.get("t");
+    t = t.toLowerCase();
+    switch(t){
+        case "create-char":
+            $(".create-char").addClass("manual-active");
+            $(".manual-0").removeAttr("href");
+            
+            break
+        case "mod-thai-install":
+            $(".mod-thai-install").addClass("manual-active");
+            $(".manual-1").removeAttr("href");
+            $.get("html/mod-thai-install.html?key=" + makecss(), function (data, status) {
+                $(".manual-content").html(data);
+            });
+            break
+        case "download":
+            $(".download").addClass("manual-active");
+            $(".manual-2").removeAttr("href");
+            $.get("html/download.html?key=" + makecss(), function (data, status) {
+                $(".manual-content").html(data);
+            });
+            break
+        default:
+            break
+    }
+
+</script>
+<style>
+    .manual-active {
+        background-color: black;
+        color: #ffffff;
+    }
+</style>
+<div class="d-flex justify-content-between">
+    <div class="card dungeons-card-margin create-char">
+        <img class="card-img-top" src="https://i.imgur.com/U96AcCC.png" style="display: none;" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">สร้างตัวละคร</h5>
+            <a href="/index.html?p=manual&t=create-char" class="stretched-link manual-0"></a>
+        </div>
+    </div>
+    <div class="card dungeons-card-margin mod-thai-install">
+        <img class="card-img-top" src="https://i.imgur.com/U96AcCC.png" style="display: none;" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">ลง Mod ภาษาไทย</h5>
+            <a href="/index.html?p=manual&t=mod-thai-install" class="stretched-link manual-1"></a>
+        </div>
+    </div>
+    <div class="card dungeons-card-margin download">
+        <img class="card-img-top" src="https://i.imgur.com/U96AcCC.png" style="display: none;" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">ดาวโหลดเกมส์</h5>
+            <a href="/index.html?p=manual&t=download" class="stretched-link manual-2"></a>
+        </div>
+    </div>
+</div>
+<div class="container">
+  <div class="panel panel-default">
+    <div class="panel-body manual-content"></div>
+  </div>
+</div>

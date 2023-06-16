@@ -1,0 +1,464 @@
+<html>
+
+<head>
+    <title>ไกด์เกมส์ BNS สำหรับคนทยที่ไปเล่นไต้หวัน By I3lackI3unny</title>
+    <meta charSet="UTF-8" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+
+    <meta property="og:locale" content="th" />
+    <meta property="og:title" content="ไกด์เกมส์ BNS" />
+    <meta property="og:description" content="ไกด์เกมส์ BNS สำหรับคนทยที่ไปเล่นไต้หวัน By I3lackI3unny" />
+    <meta property="og:image" content="https://i.imgur.com/z7id3RS.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="403" />
+    <meta property="og:image:height" content="403" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://i3lacki3unny.web.app/" />
+
+    <link rel="shortcut icon" href="favicon.png" />
+    <link href='https://fonts.googleapis.com/css?family=Itim' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <style id="headercss">
+        @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
+
+        .start-container {
+            margin: auto;
+            width: 50%;
+            border: 3px solid rgb(61, 223, 55);
+            padding: 10px;
+            text-align: center;
+            top: 75%;
+        }
+
+        body {
+            background-image: url(https://i.imgur.com/j9aeDR2.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center center;
+            font-family: 'Itim';
+            font-size: 22px;
+        }
+
+        .sticky-top {
+            top: 100px;
+        }
+
+        a:link {
+            color: 070707;
+        }
+
+        a:visited {
+            color: #070707;
+        }
+
+        a:hover {
+            color: #505050;
+        }
+
+        a:active {
+            color: #070707;
+        }
+
+        .image-m-full {
+            width: 100%;
+        }
+
+        .ui-tabs .ui-tabs-panel {
+            padding: 0px;
+        }
+
+        .prevent-select {
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            font-family: 'Itim';
+        }
+
+        .even-image {
+            opacity: 0.2;
+        }
+
+        .even-image- {
+            margin-left: 15px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+
+        .main-menu,
+        .main-menu a {
+            padding: 2px;
+            text-align: left;
+        }
+
+        .main-menu-active {
+            background-color: black;
+            color: white !important;
+        }
+
+        .main-menu-active:hover {
+            background-color: rgb(27, 27, 27);
+            color: white !important;
+        }
+
+        .error404active {
+            display: none !important;
+        }
+
+        .er404 {
+            background-image: url(https://i.imgur.com/rBCDOVx.gif);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+        }
+    </style>
+    <script>
+        var url_string = window.location.href;
+        var url = new URL(url_string);
+        var p = url.searchParams.get("p");
+        setTimeout(() => {
+            if (p != null) {
+                switch (p.toLowerCase()) {
+                    case "soul_boost_14022022":
+                    case "soul_boost_17052023":
+                    case "soul_pass_14062023":
+                    case "soul_old":
+                    case "daily":
+                    case "event":
+                    case "event2_2305":
+                    case "dungeons":
+                    case "manual":
+                        $.get(p.toLowerCase() + ".html?key" + makecss(), function (data, status) {
+                            $(".addcontent").append(data);
+                            $(".ripbnsth_").hide();
+                            $(".path-thai_").hide();
+                        });
+                        $(`.active-${p}`).addClass("main-menu-active").removeAttr("href");
+                        break
+                    default:
+                        if (window.location.search != "") {
+                            $(".ripbnsth_").hide();
+                            $(".path-thai_").hide();
+                            $(".error404active").removeClass("error404active");
+                        }
+                        break
+                }
+            }
+            if (window.location.search != "") {
+                $(".ripbnsth_").hide();
+                $(".path-thai_").hide();
+            } else {
+                $(`.active-home`).addClass("main-menu-active").removeAttr("href");
+                $.get('ripbnsth.html?' + makecss(), function (data, status) {
+                    setTimeout(() => {
+                        $(".ripbnsth").html(data);
+                    }, 500);
+                });
+            }
+        }, 200);
+        function makecss() {
+            let length = 8;
+            let result = '';
+            const characters = 'abcdefghijklmnopqrstuvwxyz';
+            const charactersLength = characters.length;
+            let counter = 0;
+            while (counter < length) {
+                result += characters.charAt(Math.floor(Math.random() * charactersLength));
+                counter += 1;
+            }
+            return `css-${result}`;
+        }
+        function get_soul_event(n, c) {
+            $.get("data/" + n.toLowerCase() + ".json?key=" + makecss(), function (data, status) {
+                $(`.${c}`).html("");
+                for (let i = 0; i < 20; i++) {
+                    const cssid = makecss();
+                    if (data[i] == undefined) {
+                        break;
+                    }
+                    $(`.${c}`).append(`<tr><td>${data[i]["tw"]}</td><td>${data[i]["th"]}</td></tr>`);
+                    $(`.${n + i}`).html(`<img class="image-m-full even-image" style="width: 200px;" src="https://i.imgur.com/U96AcCC.png" draggable="false">`);
+                    $("#headercss").append(`.${cssid} {background-image: url("https://i.imgur.com/${data[i]["img"]}.png");}`);
+                    $(`.${n + i}`).addClass(cssid);
+                    if (data[i]["img"] == "") {
+                        $(`.${n}${i}`).remove();
+                    }
+                }
+                $(`.${c}`).append(`<tr><td>I3lackI3unny</td><td><a href="i3lacki3unny.web.app">i3lacki3unny.web.app</a></td></tr>`);
+            });
+        }
+        function getDayName(date = new Date(), locale = 'en-US') {
+            return date.toLocaleDateString(locale, { weekday: 'long' });
+        }
+        function get_date_() {
+            const today = new Date();
+            const year = today.getFullYear();
+            const month = String(today.getMonth() + 1).padStart(2, '0');
+            const day = String(today.getDate()).padStart(2, '0');
+            const currentDate = `${year}-${month}-${day}`;
+            return currentDate;
+        }
+        function get_date__(dates) {
+            const date = new Date(dates);
+            date.setDate(date.getDate() + 1);
+            const year = date.getFullYear();
+            const month = String(date.getMonth() + 1).padStart(2, '0');
+            const day = String(date.getDate()).padStart(2, '0');
+            const updatedDate = `${year}-${month}-${day}`;
+            return updatedDate;
+        }
+    </script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-sm bg-light navbar-light fixed-top shadow">
+        <!--   <a class="navbar-brand" href="#">Offline</a> -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#searchNavbar">
+            <span class="fa fa-search"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="/inddex.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/index.html?p=manual&t=download" target="_blank">ดาวโหลด BNS
+                        TW</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://discord.gg/AndAW9dzrj" target="_blank">Community BNS</a>
+                </li>
+            </ul>
+        </div>
+        <a href="#">
+            <div class="fa fa-user fa-2x"></div>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </nav>
+    <div class="container" style="position:relative; margin-top:100px;opacity: 0.9;">
+        <div class="row">
+            <div class="col-3 d-none d-md-block">
+                <ul class="list-group shadow bg-white rounded sticky-top">
+                    <li class="list-group-item rounded main-menu"><a class="btn btn-light btn-lg btn-block active-home"
+                            href="index.html"><img width="32px" style="pointer-events: none;" draggable="false"
+                                src="https://i3lacki3unny.web.app/img/Q00002.png"> หน้าแรก</a>
+                    </li>
+                    <li class="list-group-item rounded main-menu">
+                        <div class="dropdown">
+                            <button
+                                class="btn btn-light btn-lg btn-block active-Soul_Boost_17052023 active-Soul_Boost_14022022 active-Soul_Pass_14062023 active-Soul_Old dropdown-toggle"
+                                style="text-align: left;padding: 0px;" type="button" id="dropdownMenuButton"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <img width="32px" style="pointer-events: none;" draggable="false"
+                                    src="https://i3lacki3unny.web.app/img/Q00001.png"> โซบูส-พาส
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="btn btn-light btn-lg btn-block" style="font-size: 17px;"
+                                    href="index.html?p=Soul_Boost_17052023"><img width="32px"
+                                        style="pointer-events: none;" draggable="false"
+                                        src="https://i3lacki3unny.web.app/img/Q00001.png"> โซบูส 1 เดือน ล่าสุด</a>
+                                <a class="btn btn-light btn-lg btn-block" style="font-size: 17px;"
+                                    href="index.html?p=Soul_Boost_14022022"><img width="32px"
+                                        style="pointer-events: none;" draggable="false"
+                                        src="https://i3lacki3unny.web.app/img/Q00001.png"> โซบูส 6 เดือน ล่าสุด</a>
+                                <a class="btn btn-light btn-lg btn-block" style="font-size: 17px;"
+                                    href="index.html?p=Soul_Pass_14062023"><img width="32px"
+                                        style="pointer-events: none;" draggable="false"
+                                        src="https://i3lacki3unny.web.app/img/Q00001.png"> โซพาส ล่าสุด</a>
+                                <a class="btn btn-light btn-lg btn-block" style="font-size: 17px;"
+                                    href="index.html?p=Soul_Old"><img width="32px" style="pointer-events: none;"
+                                        draggable="false" src="https://i3lacki3unny.web.app/img/Q00001.png"> ทั้งหมด</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item rounded main-menu"><a
+                            class="btn btn-light btn-lg btn-block active-manual" href="index.html?p=manual"><img
+                                width="32px" style="pointer-events: none;" draggable="false"
+                                src="https://i3lacki3unny.web.app/img/Q00008.png"> คู่มือเริ่มต้น</a>
+                    </li>
+                    <li class="list-group-item rounded main-menu"><a class="btn btn-light btn-lg btn-block active-daily"
+                            href="index.html?p=daily"><img width="32px" style="pointer-events: none;" draggable="false"
+                                src="https://i3lacki3unny.web.app/img/Q00004.png"> ท้าทาย</a>
+                    </li>
+                    <li class="list-group-item rounded main-menu"><a class="btn btn-light btn-lg btn-block active-event"
+                            href="index.html?p=event"><img width="32px" style="pointer-events: none;" draggable="false"
+                                src="https://i3lacki3unny.web.app/img/Q00003.png"> กิจกรรม</a>
+                    </li>
+                    <li class="list-group-item rounded main-menu" style="display: none !important;"><a
+                            class="btn btn-light btn-lg btn-block active-promotion" href="index.html?p=promotion"><img
+                                width="32px" style="pointer-events: none;" draggable="false"
+                                src="https://i3lacki3unny.web.app/img/Q00005.png"> โปรโมชัน</a>
+                    </li>
+                    <li class="list-group-item rounded main-menu"><a
+                            class="btn btn-light btn-lg btn-block active-dungeons" href="index.html?p=dungeons"
+                            style="cursor: not-allowed;text-decoration: none;color: currentColor;"><img width="32px"
+                                style="pointer-events: none;" draggable="false"
+                                src="https://i3lacki3unny.web.app/img/Q00006.png"> แนะนำดันเจียน</a>
+                    </li>
+                    <li class="list-group-item rounded main-menu" style="display: none !important;"><a
+                            class="btn btn-light btn-lg btn-block active-Soul_Boost_14022022"
+                            href="index.html?p=Soul_Boost_14022022"><img width="32px" style="pointer-events: none;"
+                                draggable="false" src="https://i3lacki3unny.web.app/img/Q00001.png"> โซบูส 6 เดือน
+                            ล่าสุด</a>
+                    </li>
+                    <li class="list-group-item rounded main-menu" style="display: none !important;"><a
+                            class="btn btn-light btn-lg btn-block active-Soul_Boost_17052023"
+                            href="index.html?p=Soul_Boost_17052023"><img width="32px" style="pointer-events: none;"
+                                draggable="false" src="https://i3lacki3unny.web.app/img/Q00001.png"> โซบูส 1 เดือน
+                            ล่าสุด</a>
+                    </li>
+                    <li class="list-group-item rounded main-menu" style="display: none !important;"><a
+                            class="btn btn-light btn-lg btn-block active-Soul_Pass_14062023"
+                            href="index.html?p=Soul_Pass_14062023"><img width="32px" style="pointer-events: none;"
+                                draggable="false" src="https://i3lacki3unny.web.app/img/Q00001.png"> โซพาส ล่าสุด</a>
+                    </li>
+                    <li class="list-group-item rounded main-menu" style="display: none !important;"><a
+                            class="btn btn-light btn-lg btn-block active-Soul_Old" href="index.html?p=Soul_Old"><img
+                                width="32px" style="pointer-events: none;" draggable="false"
+                                src="https://i3lacki3unny.web.app/img/Q00001.png"> รวมโซบูส-พาส</a>
+                    </li>
+                </ul>
+                <hr class="d-sm-none">
+            </div>
+            <div class="col-9">
+                <div class="card shadow bg-white rounded addcontent">
+                    <div class="card-body">
+                        <h1>I3lack I3unny</h1>
+                        <h5>Discord : ღ♫Diwツ♫ღ#7290</h5>
+                        <h5>BNS Community หลัก: <a href="https://discord.gg/AndAW9dzrj"
+                                target="_blank">https://discord.gg/AndAW9dzrj</a>
+                        </h5>
+                        <h5>BNS Community สำรอง : Coming Soon!
+                        </h5>
+                        <div style="display: none !important;" align='center'><a
+                                href='https://www.free-website-hit-counter.com'><img
+                                    src='https://www.free-website-hit-counter.com/c.php?d=9&id=151626&s=18' border='0'
+                                    alt='Free Website Hit Counter'></a><br /><small><a
+                                    href='https://www.free-website-hit-counter.com'
+                                    title="Free Website Hit Counter">Free website hit counter</a></small></div>
+                    </div>
+                </div>
+                <hr class="d-sm-none">
+                <div class="card shadow bg-white rounded path-thai_" style="margin-top: 25px;">
+                    <div class="card-body path-thai" style="margin-left: auto;margin-right: auto;">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/0mRBLlkJcGY"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                        <h4 style="margin-left: auto;margin-right: auto;margin-top: 7px;margin-bottom: 7px;">วิธีลง Mod
+                            ภาษาไทย By Zelda</h4>
+                        <br>
+                        <h5>BNS Buddy Link</h5>
+                        <h5><a href="https://www.bnsbuddy.com/download/"
+                                target="_blank">https://www.bnsbuddy.com/download/</a></h5>
+                        <br>
+                        <h5>Mod link</h5>
+                        <h5><a href="https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbWFSWFpHYnJRRVJnTHFwM0duRzJtdU9rTEdvUXxBQ3Jtc0tuWDlhZWNsS0FnWEpYelRCWnRSd2tjamxuYmlBZFpEZC1HSF9TUHhLR0Y2WlhQWnpjeE9CQW1SY0FLTzVneFBDSHBTY2FkRTViNVVFVVczZWNVMmE3a2RPS1Q4MW95cEFERWN0UjZPRWwxTWp3LXhqZw&q=https%3A%2F%2Fwww.mediafire.com%2Ffile%2F9dnod0au77icgks%2FTH-ENG_Translate_By_Zelda.rar%2Ffile&v=0mRBLlkJcGY"
+                                target="_blank">https://www.mediafire.com/file/9dnod0...</a>
+                        </h5>
+                        <br>
+                        <h5>สำรอง</h5>
+                        <h5><a href="https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbWtyNDZCWUNKeGhqb09wTTd4cnpwNkF5cjhhZ3xBQ3Jtc0traDU3UldjTDFNSkxwRk5JdEFKTlQxS2kzcUR2blM0YXhGODV2UjJZSENweXhZVG1mQjNXTkxMZ2k2S3Z2N3EyQ093Q1NqVFRNOFRqTXZkNUxFM1FuYlBTOTFNVlhZdkdqMzZtNWZtd3I2bWdoT0VJNA&q=https%3A%2F%2Fdrive.google.com%2Ffile%2Fd%2F1G5EYinubsb7rWwl44I5c7EteaP1sB4DQ%2Fview%3Fusp%3Dsharing&v=0mRBLlkJcGY"
+                                target="_blank">https://drive.google.com/file/d/1Kh3k...</a>
+                        </h5>
+                    </div>
+                </div>
+                <hr class="d-sm-none">
+                <div class="card shadow bg-white rounded ripbnsth_" style="margin-top: 25px;">
+                    <div class="card-body ripbnsth">
+                    </div>
+                </div>
+                <hr class="d-sm-none">
+                <div class="card shadow bg-white rounded error404active" style="margin-top: 25px;">
+                    <div class="card-body er404">
+                        <img class="prevent-select" style="pointer-events: none;opacity: 0;"
+                            src="https://i.imgur.com/LSgCGYS.png" width="100%" draggable="false">
+                    </div>
+                </div>
+                <br><br>
+            </div>
+            <div class="col-3 d-none d-md-block" style="display: none !important;">
+                <ul class="list-group shadow bg-white rounded sticky-top">
+                    <li class="list-group-item rounded"><a class="btn btn-light btn-lg btn-block" href="#">Coming
+                            Soon!</a>
+                    </li>
+                    <li class="list-group-item rounded"><a class="btn btn-light btn-lg btn-block" href="#">Coming
+                            Soon!</a>
+                    </li>
+                    <li class="list-group-item rounded"><a class="btn btn-light btn-lg btn-block" href="#">Coming
+                            Soon!</a>
+                    </li>
+                    <li class="list-group-item rounded"><a class="btn btn-light btn-lg btn-block" href="#">Coming
+                            Soon!</a>
+                    </li>
+                    <li class="list-group-item rounded"><a class="btn btn-light btn-lg btn-block" href="#">Coming
+                            Soon!</a>
+                    </li>
+                </ul>
+                <hr class="d-sm-none">
+            </div>
+        </div>
+    </div>
+    <style>
+        @media only screen and (max-width: 1400px) {
+            .miku-emo {
+                display: none !important;
+                -webkit-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+                background-image: url("https://i.imgur.com/TbMyZxu.gif");
+                background-size: cover;
+            }
+        }
+
+        .miku-emo {
+            background-image: url("https://i.imgur.com/TbMyZxu.gif");
+            background-size: cover;
+        }
+    </style>
+    <div class="miku-emo" style="position: fixed;bottom: 0px;left: 100px;">
+        <img src="https://i.imgur.com/VUk0Qlv.png" style="pointer-events: none;opacity: 0;" draggable="false"
+            width="250" alt="">
+    </div>
+    <div id="background-video">
+        <video autoplay loop muted>
+            <source src="https://image.tw.ncsoft.com/bns/pc/event/update/2306/video/bg_main.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <style>
+        #background-video {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            z-index: -1;
+        }
+
+        #background-video video {
+            object-fit: cover;
+        }
+    </style>
+</body>
+
+</html>

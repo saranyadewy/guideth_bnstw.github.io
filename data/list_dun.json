@@ -1,0 +1,239 @@
+[
+    {
+        "Comment": {
+            "Owner": "https://i3lacki3unny.web.app/"
+        },
+        "items": {
+            "0": {
+                "name": "[icon:item0000000000] 渾沌雪人洞窟大轉盤使用券",
+                "color": "#3FFBF3"
+            },
+            "1": {
+                "name": "[icon:item0000000001] แผ่นผนึกค่าสถานะฮงมุน ที่ส่องสว่าง",
+                "color": "#3FFBF3"
+            },
+            "2": {
+                "name": "[icon:item0000000002] Peculiar Promises Treasure Chest",
+                "color": "#3FFBF3"
+            },
+            "3": {
+                "name": "[icon:item0000000003] 風島項鍊",
+                "color": "#F9A018"
+            },
+            "4": {
+                "name": "[icon:item0000000004] 風島手鐲",
+                "color": "#F9A018"
+            },
+            "5": {
+                "name": "[icon:item0000000005] 風島腰帶",
+                "color": "#F9A018"
+            },
+            "6": {
+                "name": "[icon:item0000000006] 天崑真氣石",
+                "color": "#F9A018"
+            },
+            "7": {
+                "name": "[icon:item0000000007] อาวุธเปลวสุริยะ ประกายคราม",
+                "color": "#F61279"
+            },
+            "8": {
+                "name": "[icon:item0000000008] กล่องอาวุธเปลวสุริยะ ประกายคราม แช่แข็ง",
+                "color": "#F61279"
+            },
+            "9": {
+                "name": "[icon:item0000000009] กล่องแหวนคลื่นสวรรค์ ประกายคราม แช่แข็ง",
+                "color": "#F61279"
+            },
+            "10": {
+                "name": "[icon:item0000000010] กล่องต่างหูลิขิตสวรรค์ ประกายคราม แช่แข็ง",
+                "color": "#F61279"
+            },
+            "11": {
+                "name": "[icon:item0000000011] กล่องสร้อยคอไม้แดนสวรรค์ ประกายคราม แช่แข็ง",
+                "color": "#F61279"
+            },
+            "12": {
+                "name": "[icon:item0000000012] Upsurge Evolution Stone",
+                "color": "#3FFBF3"
+            },
+            "13": {
+                "name": "[icon:item0000000013] Exceptional True Stormtide Gloves Chest",
+                "color": "#F61279"
+            },
+            "14": {
+                "name": "[icon:item0000000013] Ballalion Soul Badge Chest",
+                "color": "#F61279"
+            },
+            "9999999": {
+                "name": "Unknow",
+                "color": "#FFFFFF"
+            }
+        },
+        "quest": {
+            "0": {
+                "name": "[icon:daily_quest] Unknow",
+                "note": ""
+            },
+            "1": {
+                "name": "[icon:space_quest] Unknow",
+                "note": ""
+            },
+            "2": {
+                "name": "山一角",
+                "note": "เควสพื้นที่ดันถ้ำเยติแห่งความโกลาหล"
+            }
+        },
+        "3d5519b49c91df7cef18e944a2755b7a": {
+            "name": "ถ้ำเยติแห่งความโกลาหล",
+            "md5": "3d5519b49c91df7cef18e944a2755b7a",
+            "player": "4",
+            "localtion": "F8 > [icon:dungeons] ดันเจี้ยนรวมเซิฟเวอร์",
+            "reward": {
+                "0": "0",
+                "1": "1",
+                "2": "2",
+                "3": "3",
+                "4": "4",
+                "5": "5",
+                "6": "6"
+            },
+            "daily_quest": {
+                "name": "[icon:daily_quest] 落"
+            },
+            "space_quest": {
+                "name": "[icon:space_quest] 山一角"
+            }
+        },
+        "e830bdeb1a7b6e6b55aec2a2e6c110e6": {
+            "name": "อควาเรียม (Abyssal Throne) (黑龍教降臨殿)",
+            "md5": "e830bdeb1a7b6e6b55aec2a2e6c110e6",
+            "player": "4",
+            "localtion": "F8 > [icon:dungeons] ดันเจี้ยนรวมเซิฟเวอร์",
+            "reward": {
+                "0": "7",
+                "1": "8",
+                "2": "9",
+                "3": "10",
+                "4": "11",
+                "5": "12"
+            },
+            "daily_quest": {
+                "name": "[icon:daily_quest] Deep Passage"
+            },
+            "space_quest": {
+                "name": "[icon:space_quest] Unknow"
+            }
+        },
+        "860e2891c2efc6cd729a128e3b02391e": {
+            "name": "นกฮาปี้ (Skysong Isle) (搖風島)",
+            "md5": "860e2891c2efc6cd729a128e3b02391e",
+            "player": "4",
+            "localtion": "F8 > [icon:dungeons] ดันเจี้ยนรวมเซิฟเวอร์",
+            "reward": {
+                "0": "7",
+                "1": "8",
+                "2": "9",
+                "3": "10",
+                "4": "11",
+                "5": "13",
+                "6": "14"
+            },
+            "daily_quest": {
+                "name": "[icon:daily_quest] Unknow"
+            },
+            "space_quest": {
+                "name": "[icon:space_quest] Unknow"
+            }
+        },
+        "301e6c6131ccf1a73d0e686d172c59fd": {
+            "name": "สำนักคุนลุนแห่งห้วงเวลา",
+            "md5": "301e6c6131ccf1a73d0e686d172c59fd",
+            "player": "4",
+            "localtion": "F8 > [icon:dungeons] ดันเจี้ยนรวมเซิฟเวอร์",
+            "reward": {
+                "0": "9999999"
+            },
+            "daily_quest": {
+                "name": "[icon:daily_quest] Unknow"
+            },
+            "space_quest": {
+                "name": "[icon:space_quest] Unknow"
+            }
+        },
+        "fbe2ba9b10a44ab1daa2c1a067af7af9": {
+            "name": "แดนแห่งความโกลาหล",
+            "md5": "fbe2ba9b10a44ab1daa2c1a067af7af9",
+            "player": "4",
+            "localtion": "F8 > [icon:dungeons] ดันเจี้ยนรวมเซิฟเวอร์",
+            "reward": {
+                "0": "9999999"
+            },
+            "daily_quest": {
+                "name": "[icon:daily_quest] Unknow"
+            },
+            "space_quest": {
+                "name": "[icon:space_quest] Unknow"
+            }
+        },
+        "3b3d334eb4443749e4d151f983dca3fa": {
+            "name": "ศูนย์วิจัยกลายพันธุ์เงามังกรดำ",
+            "md5": "3b3d334eb4443749e4d151f983dca3fa",
+            "player": "4",
+            "localtion": "F8 > [icon:dungeons] ดันเจี้ยนรวมเซิฟเวอร์",
+            "reward": {
+                "0": "9999999"
+            },
+            "daily_quest": {
+                "name": "[icon:daily_quest] Unknow"
+            },
+            "space_quest": {
+                "name": "[icon:space_quest] Unknow"
+            }
+        },
+        "f2107090e64e1fdf4bae7abcb3249a7c": {
+            "name": "ลานประลองเทวาอนันต์",
+            "md5": "f2107090e64e1fdf4bae7abcb3249a7c",
+            "player": "4",
+            "localtion": "ซอรัก > [icon:warp] วิหารศักดิ์ศิทธิ์",
+            "reward": {
+                "0": "9999999"
+            },
+            "daily_quest": {
+                "name": "[icon:daily_quest] Unknow"
+            },
+            "space_quest": {
+                "name": "[icon:space_quest] Unknow"
+            }
+        },
+        "cb512a2ff3fb6965b0776e3d88a31cbd": {
+            "name": "ลานประลองอรหันต์หัตถ์เทวา",
+            "md5": "cb512a2ff3fb6965b0776e3d88a31cbd",
+            "player": "4",
+            "localtion": "ซอรัก > [icon:warp] วิหารศักดิ์ศิทธิ์",
+            "reward": {
+                "0": "9999999"
+            },
+            "daily_quest": {
+                "name": "[icon:daily_quest] Unknow"
+            },
+            "space_quest": {
+                "name": "[icon:space_quest] Unknow"
+            }
+        },
+        "8c25efb4059ee4e6e39ff3ebf16fd22e": {
+            "name": "โถงเทวาพิทักษ์",
+            "md5": "8c25efb4059ee4e6e39ff3ebf16fd22e",
+            "player": "4",
+            "localtion": "ซอรัก > [icon:warp] วิหารศักดิ์ศิทธิ์",
+            "reward": {
+                "0": "9999999"
+            },
+            "daily_quest": {
+                "name": "[icon:daily_quest] Unknow"
+            },
+            "space_quest": {
+                "name": "[icon:space_quest] Unknow"
+            }
+        }
+    }
+]
